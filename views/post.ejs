@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BUB BUB BUB</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="../logo_sm.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+</head>
+<body>
+<%- include('partials/navbar') %>
+  <div class="main container">
+    <h1 class="my"><%= post.title %></h1>
+    <img class="img-fluid" src="<%= post.image%>">
+    <h2>by: <%=post.user%></h2>
+    <p>Likes: <%= post.likes %></p>
+    <p><%= post.caption %></p>
+    <p>Created At: <%=post.date%></p>
+    <div class="like-delete">
+    <form action="/posts/likePost/<%= post.id %>" method="POST">
+      <button class="btn" type="submit">Like</button>
+    </form>
+    <% if (post.userId == user._id) {%>
+      <form action="/posts/deletePost/<%= post.id %>"
+        method="POST">
+        <button class="btn" type="submit">Delete</button>
+      </form>
+    </div>
+    <% } %>
+  </div>
+</body>
+</html>
