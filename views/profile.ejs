@@ -1,0 +1,30 @@
+<%- include('partials/header') -%>
+<body>
+  <%- include('partials/navbar') %>
+  <div class="main container">
+    <h1 class="my"><%=user.userName%>'s Profile</h1>
+    <div class="profile grid">
+      <div class="form-control create-post">
+        <form method="POST" enctype="multipart/form-data" action="posts/createPost">
+          <h2>Create a New Post</h2>
+            <input type="text" id="title" name="title" placeholder="title">
+            <input type="textarea" id="caption" name="caption" placeholder="caption">
+            <label for="imgUpload" class="form-label">image</label>
+            <input type="file" id="imageUpload" name="file">
+            <button type="submit" class="btn" value="submit">Submit</button>
+        </form>
+      </div>
+      <div class="posts">
+        <% if (posts.length) { %>
+                  <h2>My Posts</h2>
+        <% } %>
+        <ul class="grid">
+          <% for (let i=0; i < posts.length; i++) {%>
+          <li><a href="/posts/<%= posts[i]._id %>"><img class="img-fluid-sm" src="<%= posts[i].image%>"></a></li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

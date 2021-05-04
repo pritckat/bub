@@ -1,0 +1,23 @@
+<%- include('partials/header') -%>
+<body>
+  <div class="main container">
+    <h1>Sign Up</h1>
+    <div class="lone grid">
+      <% if (locals.messages.errors) { %>
+          <% messages.errors.forEach( el => { %>
+              <div class="alert alert-danger"><%= el.msg %></div>
+          <% }) %>    
+      <% } %>
+      <div class="form-control">
+        <form action="/signup" method="POST">
+            <input type="text" name="userName" placeholder="User Name">
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Password">
+            <input type="password" name="confirmPassword" placeholder="Confirm Password">
+            <input type="submit" class="btn" value="Sign Up">
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
