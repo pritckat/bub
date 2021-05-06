@@ -1,16 +1,24 @@
 # Introduction
 
-A Simple ToDo App is built using the MVC Architecture, we have also implemented "authorization" so folx can sign up, customize & personalize the app 
+Welcome to **Mighty BUB**, a light-weight social media platform designed for ease of use and straight forward simplicity.  It is built using MVC Architecture and authorized login.  Individual profiles may create an account, make image posts with titles and descriptions, and then *like* posts that are made to the public feed.
 
 ---
 
-> Be sure to add that lovely star 😀 and fork it for your own copy
+> Go ahead and ⭐STAR our app and feel free to fork your personal copy!
 
 ---
 
 # Objectives
 
-- It's a beginner level app created to understand how MVC concept and logins are added
+- Build a basic social media app with the foundational concepts of a CRUD app
+
+- Expands upon those CRUD principles by expanding into the MVC Architecture
+
+- Added layer of complexity/interface by adding personalized logins using passport 
+
+- Sizing images appropriately in posts
+
+- Easy to consume and eye-pleasing design
 
 ---
 
@@ -22,23 +30,43 @@ A Simple ToDo App is built using the MVC Architecture, we have also implemented 
 
 # Packages/Dependencies used 
 
-connect-mongo, dotenv, ejs, express, express-session, mongodb, mongoose, morgan, nodemon, passport, passport-local
+bcrypt, cloudinary, connect-mongo, dotenv, ejs, express, express-session, express-flash, mongodb, mongoose, morgan, multer, nodemon, passport, passport-local, validator
 
 ---
 
 # Install all the dependencies or node packages used for development via Terminal
 
-`npm install` 
+`npm install`
+- `express`
+- `ejs`
+- `dotenv`
+- `mongodb`
+- `mongoose`
+- `passport`
+- `nodemon`
+- `morgan`
+- `cloudinary`
+
 
 ---
 
 # Things to add
 
 - Create a `.env` file and add the following as `key: value` 
-  - PORT: 2121 (can be any port example: 3000) 
+  - PORT: 2121 (can be any port example: 3000, but our homage to 2121 holds)
   - DB_STRING: `your database URI` 
+  - CLOUD-NAME: `your cloudinary cloud name`
+  - API_KEY: `your cloudinary cloud api key`
+  - API_SECRET: `your cloudinary cloud api secret`
  ---
  
  Have fun testing and improving it! 😎
 
+# Team:
 
+  - emmebee
+  - bombaloni
+  - wonka
+  - Adel
+  - Sparx
+  - garrettThor
