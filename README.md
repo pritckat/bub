@@ -55,7 +55,7 @@ bcrypt, cloudinary, connect-mongo, dotenv, ejs, express, express-session, expres
 - Create a `.env` file and add the following as `key: value` 
   - PORT: 2121 (can be any port example: 3000, but our homage to 2121 holds)
   - DB_STRING: `your database URI` 
-  - CLOUD-NAME: `your cloudinary cloud name`
+  - CLOUD_NAME: `your cloudinary cloud name`
   - API_KEY: `your cloudinary cloud api key`
   - API_SECRET: `your cloudinary cloud api secret`
  ---
