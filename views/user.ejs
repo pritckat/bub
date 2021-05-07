@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+<body>
+<%- include('partials/navbar') %>
+<div class="main container">
+  <h1 class="my"><%= posts[0].user %>'s Profile %></h1>
+  <ul class="grid">
+    <% posts.forEach(post => { %>
+      <li class="feed-item"><a href="/posts/<%=post._id%>"><img class="img-fluid" src="<%= post.image%>"></a></li>
+    <% }) %>
+  </ul>
+</div>
+</body>
+</html>
