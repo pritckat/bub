@@ -75,6 +75,12 @@ h1 {
   height: 100%;
 }
 
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
 .navbar .container,
 .navbar .container h1,
 .navbar .container li,
