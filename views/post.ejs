@@ -1,13 +1,13 @@
 <%- include('partials/header') %>
 <body>
-<%- include('partials/navbar') %>
+  <%- include('partials/navbar') %>
   <div class="main container">
     <h1 class="my"><%= post.title %></h1>
     <img class="img-fluid" src="<%= post.image%>">
-    <h2>by: <%=post.user%></h2>
+    <h2>by: <a href="/users/<%=post.userId%>"> <%=post.user%> </a> </h2>
     <p>Likes: <%= post.likes %></p>
     <p><%= post.caption %></p>
-    <p>Created At: <%=post.date%></p>
+    <p>Created At: <%=post.date%> </p>
     <div class="like-delete">
     <form action="/posts/likePost/<%= post.id %>" method="POST">
       <button class="btn" type="submit">Like</button>
@@ -19,6 +19,7 @@
       </form>
     </div>
     <% } %>
+    <a href="/feed"><button class="btn">Back to Feed</button></a>
   </div>
 </body>
 </html>
